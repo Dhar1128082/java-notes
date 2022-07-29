@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class one..</h1>
+    <pre>
+        Topics: 1.Introduction to javascript
+                2. How javascript works and exection context
+                3. How js code is executed and call stack
+                4. JS engine ( chrome--> v8 engine)
+                             (firefox--> spider monkey)
+                             (Internet Explorer--> chakra)
+
+
+        1. Introduction to javascript: Interpretor Language and execute 
+        code line by line
+
+
+        2. How javascript work and execution context:-
+            Everything happens inside js in execution context.
+            it is divided into two part- one is variable environment and 
+            other is thred of execution
+            or we can also said this that one part is memory area and other
+            one is code area and whole box is called execution context.
+
+            --> for each set of function a seperate execution context is created
+            --> call stack- also known as GEC (Global Execution Context)
+                for each function and for its value we use call stack to 
+                reduce overloading of memory. 
+    </pre>
+
+
+    <h1> Class two</h1>
+
+    <pre>
+        Topics: 
+        <ol>
+            <li>Declarion</li>
+            <li>Hoisting in JS</li>
+            <li>Undefined vs not defined</li>
+            <li>Strict mode</li>
+        </ol>
+        1. Declarion--> Three types of declaration:-
+                                                    <ol type="i">
+                                                        <li>var</li>
+                                                        <li>let</li>
+                                                        <li>const</li>
+                                                    </ol>
+
+
+        Data- type--> Different type of data like int, float , double
+                      string, object and buffer(asked in node js)
+
+        note:- script tag is used before body tag
+
+        var:--> var stand for variable and it is a global variable 
+                which mean it can be accessed anywhere in the code
+                eg:- var a=45
+                    a =26
+                    console.log(a)
+
+        const:-->  const variable stand for constant variable, by the name we 
+                    can understand what is constant.Constant means whose value
+                    can not change once it was declare
+
+                    eg:--> const a=45
+                    a =26
+                    console.log(a)
+
+        
+        let :--> let is similar to var but a difference is that it can 
+                 accessed inside block or we can also said this to local 
+                 scope.
+                 <eg:->
+                    let a=45
+                    a =26
+                    console.log(a)
+                 </eg:->
+          
+                 
+        <eg:--> 
+            const a =12
+            console.log(a)
+            {
+                let a=56
+                console.log(a) // output is 56
+            }
+            console.log(a) // produce an erron that is reference error
+        </eg:-->
+
+        note:- if we want to use the value of let outside the block we cannot
+        use it.
+
+        but in case of var it is a global scope which mean we can use var value
+        anywhere in the code.
+
+        Type of Error:--
+                        1. syntax error
+                        2. reference error
+                        3. type error
+        strict mode:-- syntax-- "use script"
+
+
+        Hoisting in Js:- Hoisting in JS is the default behaviour of moving 
+        all declaration at the top of the scope before execution.
+
+
+        function:--a functin is block of code which is used for specific operation
+                    in the code. when we need a function than according to us we can 
+                    call the function.
+
+        three ways to declare a function:-
+                                    eg:- function trex()
+                                            {
+                                                console.log("hello bhaiya")
+                                            }            
+                                            trex()  // function called
+
+
+                                    eg:2--> additon=function()
+                                            {
+                                                console.log(12+45)
+                                            }
+                                            function() // output-- 57
+
+                                    eg:-3--> fat arrow function:-
+                                            var addditon3=() -->
+                                            {
+                                                console.log(12+45)
+                                            }
+                                            additon3(); // output--57
+    </pre>
+
+    <h1>class three</h1>
+    <pre>
+        temporal zone:- it works only works with let & const
+
+        {let & const-> it comes under script zone.}
+        hosting is possible for all three i.e. let,
+        char & const.and we getting undefined output.
+
+        until let & const connot access before initialization 
+        secure of the temporal zone beacuse let& const is in localscope& udr is a global scope.
+
+        ***
+        let& const are in script memory.
+        temporal zone:-- definition (home work)
+        > operator in JS:-- 
+                          perform operation is called operator work b/w two operators.
+                          arthematic operator:- +  addition.
+                                                -  sub.
+                                                *  multiplication.
+                                                ** exponentiol. 
+                                                /  division. 
+                                                %  modules. 
+                                                ++ increment.
+                                                -- decrement. 
+       con catenation-> '+'
+                                         eg,- 
+                                           12+"jag"-> output-> 12 jag 
+                                         eg,- 
+                                           console.log(12+"jag") 
+                                           // NAN--> not a number 
+                                         eg,-> consol.log ("12-jag")
+                                         output-> Nan 
+                                         console.log("12*jag") ->NaN  
+      Quite what is the latest update of js.-> H/W 
+                                         increment:-> 
+                                            let a=2;
+                                            a++;
+                                            consol.log(a)
+                                            output->3 
+                                            a+=1
+                                            a=a+1 
+                                            a++ 
+                                            all are same
+          
+                                            
+        ++a--> pre-increment
+        a++--> post increment                                           
+                                        
+      
+        Assignment Operator--> 
+                            =,+=,-=, *=,/=,**=, %=
+
+
+
+        Comparision Operator--> 
+            console.log(1==1) // true
+            console.log(1==2) // false
+
+            It doesn't care about the data type
+
+        console.log(1==='1') // false
+         
+        note:- It care about the data type
+
+        console.log(1!==2) // true
+
+        Ternary Operator--> 
+         
+        Syntax:-- (conditon) ? true : false // syntax
+
+        eg:- (5>2) ? console.log('hi') : console.log('bye')
+            output:-- bye
+
+
+        Logical Operator--> 
+        &&--> Logical and
+        ||--> Logical or
+        !--> logical not
+
+
+        Note--> Any value other than zero(0) is true.
+
+                                                                         
+    </pre>
+
+    <h1>Class four</h1>
+    <pre>
+        Bitwise Operator:--> 
+        <ol>
+            <li>Bitwise and </li>
+            <li>Bitwise or</li>
+            <li>Bitwise Not</li>
+            <li>Bitwise xor</li>
+            <li>left shift</li>
+            <li>right shift</li>
+        </ol>
+
+        Today's Topic:---> 
+
+        <ol>
+            <li>If</li>
+            <li>else</li>
+            <li>else-if</li>
+            <li>switch</li>
+            <li>Ternary operator</li>
+        </ol>
+
+
+    If statement:--> 
+                eg:- const fav-lang="Javascript"
+                    if(fav_lang=="python")
+                    {
+                        console.log("Awesome")
+                    }
+                    else{
+                        console.log('Noo')
+                    }
+
+    else-if statement:--> 
+                eg:-  const fav-lang="Javascript"
+
+                if(fav_lang=="python")
+                {
+                    console.log("Awesome")
+                }
+                else if{
+                    console.log('Noo')
+                }
+                else if(fav_lang=='bhai Language')
+                {
+                    console.log('hello javaScript ')
+                }
+                else{
+                    console.log('please enter a valid thing')
+                }
+
+        switch-->  when we want to select a single statement out of multiple
+                    condition then we use switch condtiton
+
+                    eg:--> const key='animal'
+                            switch(key)
+                            {
+                                case 'animal' :
+                                        {
+                                            console.log('animal are lovely')
+                                            break;
+                                        }
+
+                                case 'bird' : 
+                                        {
+                                            console.log('They are Jolly')
+                                            break;
+                                        }
+                                
+                                case 'ants' :
+                                        {
+                                            console.log('They are Perfect')
+                                            break;
+                                        }
+
+                                default : 
+                                        {
+                                            console.log('Please enter a valid value')
+                                            break;
+                                        }
+                            }
+    </pre>
+</body>
+</html>
